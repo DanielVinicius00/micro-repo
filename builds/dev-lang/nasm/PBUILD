@@ -6,7 +6,7 @@ VERSION="2.16.03"
 DESC="The Netwide Assembler (NASM) is an assembler and disassembler for the Intel x86 architecture."
 
 URL_FONT="https://www.nasm.us/pub/nasm/releasebuilds/${VERSION}/nasm-${VERSION}.tar.xz"
-
+GIT_FONT="https://github.com/DanielVinicius00/micro-repo/source/nasm-latest.tar.xz"
 DEP="asciidoc
      xmlto"
 
