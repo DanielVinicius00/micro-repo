@@ -1,0 +1,22 @@
+
+
+
+SRC_NAME="nasm"
+VERSION="2.16.03"
+DESC="The Netwide Assembler (NASM) is an assembler and disassembler for the Intel x86 architecture."
+
+URL_FONT="https://www.nasm.us/pub/nasm/releasebuilds/${VERSION}/nasm-${VERSION}.tar.xz"
+
+DEP="asciidoc
+     xmlto"
+
+TAR_FORM="tar -xf ${SRC_NAME}.tar.xz"
+
+BU_FORM="./configure --prefix=/usr && make -j${FLAGS_BUILD}"
+
+INSTALL="make install"
+
+INSTALL_DOC="
+	install -m755 -d         /usr/share/doc/nasm-2.16.03/html  &&
+	cp -v doc/html/*.html    /usr/share/doc/nasm-2.16.03/html  &&
+	cp -v doc/*.{txt,ps,pdf} /usr/share/doc/nasm-2.16.03"
